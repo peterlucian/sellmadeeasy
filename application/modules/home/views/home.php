@@ -124,7 +124,7 @@
 									
 EOD;
 									
-									} else if($this->session->userdata('email') == "plnascimento@hotmail.com") {
+									} else if($this->session->userdata('email') == "admin@gmail.com") {
 										
 										echo <<< EOT
 											<li class="nav-item">
