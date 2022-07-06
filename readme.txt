@@ -7,4 +7,6 @@ a db.sql esta na pasta db para ser importada;
 works with xampp 7.4.8, as it brings a compatible version of php, since the project is from 2020 and has not been updated;
 you have to install composer, and user composer install to install packages;
 for paypal to work you have to put the client id and client secret in the controller in the paypal module;
-the db.sql is on the folder db so it can be imported;
+the db.sql is on the folder db so it can be imported u should name the schema store;
+test admin is admin@gmail.com password 1234;
+

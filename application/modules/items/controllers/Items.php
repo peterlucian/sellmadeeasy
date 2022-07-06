@@ -152,7 +152,11 @@ class items extends MX_Controller {
 		$id=$this->uri->segment(3);  
 		
 		$this->load->model('items_model');
-		$this->items_model->_delete($id);
+		$result=$this->items_model->_search_in_history($id);
+		$check=$this->items_model->_delete_from_history($id);
+		if($check == true || $result->num_rows() < 1){
+			$this->items_model->_delete($id);
+		} 
 
 		$this->items_form();
 

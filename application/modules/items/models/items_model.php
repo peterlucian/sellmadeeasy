@@ -31,6 +31,23 @@ function _search_by_id($id)
     return $query;
 }
 
+function _search_in_history($id) 
+{
+    $this->db->where('item_id', $id);
+    $query = $this->db->get('history');
+    return $query;
+}
+
+function _delete_from_history($id)
+{
+    $this->db->where('item_id', $id);
+    $this->db->delete('history');
+    if ($this->db->affected_rows()){
+        return true;
+    }
+}
+
+
 function _delete($id)
 {
     $this->db->where('id', $id);
